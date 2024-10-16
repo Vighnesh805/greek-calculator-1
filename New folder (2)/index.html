@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option Volatility Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Option Volatility Calculator</h1>
+        <div class="calculator">
+            <label for="stockPrice">Stock Price (S):</label>
+            <input type="number" id="stockPrice" required>
+
+            <label for="strikePrice">Strike Price (K):</label>
+            <input type="number" id="strikePrice" required>
+
+            <label for="timeToMaturity">Time to Maturity (days):</label>
+            <input type="number" id="timeToMaturity" required>
+
+            <label for="riskFreeRate">Risk-Free Rate (r):</label>
+            <input type="number" id="riskFreeRate" step="0.01" required>
+
+            <label for="marketPrice">Market Price:</label>
+            <input type="number" id="marketPrice" required>
+
+            <label for="optionType">Option Type:</label>
+            <select id="optionType">
+                <option value="call">Call</option>
+                <option value="put">Put</option>
+            </select>
+
+            <button id="calculateButton">Calculate Volatility</button>
+
+            <div class="result" id="result">Implied Volatility: N/A</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
